@@ -1,0 +1,17 @@
+<!-- navbar.component.html -->
+<div class="navbar-container">
+  <button class="menu-button" (click)="toggleMenu()">Menu</button>
+  <div class="fullscreen-nav" [@navbarTransition]="menuState">
+    <div class="nav-header">
+      <span class="close-btn" (click)="toggleMenu()">Close</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#">Introduction</a></li>
+      <li><a href="#">Ship in the Box</a></li>
+      <li><a href="#">Sails of Steel</a></li>
+      <li><a href="#">Bouquet of Sound</a></li>
+      <li><a href="#">A Place to Gather</a></li>
+      <li><a href="#">Index</a></li>
+    </ul>
+  </div>
+</div>

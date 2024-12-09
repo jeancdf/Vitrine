@@ -1,0 +1,73 @@
+/* navbar.component.css */
+
+/* Bouton du menu */
+.menu-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    color: black;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+  }
+  
+  /* Page pleine écran */
+  .fullscreen-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ff5a5a; /* Couleur rouge de l'exemple */
+    transform: translateY(-100%);
+    transition: transform 0.5s ease;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .fullscreen-nav.active {
+    transform: translateY(0);
+  }
+  
+  /* Liens de navigation */
+  .nav-links {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .nav-links li {
+    margin: 10px 0;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    font-size: 24px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: black;
+  }
+  
+  /* Bouton de fermeture */
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 16px;
+    color: black;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+  }
+  
