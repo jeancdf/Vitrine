@@ -1,0 +1,84 @@
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #000000, #333333);
+    color: white;
+    text-align: center;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin: 0;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out 0.5s;
+    animation-fill-mode: forwards;
+  }
+  
+  .section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(150px); /* More dramatic entry */
+    transition: all 1.2s cubic-bezier(0.25, 0.1, 0.25, 1); /* Smoother easing */
+  }
+  
+  .section.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Text Animations */
+  .section h2 {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 1.2s ease-out;
+  }
+  
+  .section p {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 1.2s ease-out;
+  }
+  
+  .section.in-view h2,
+  .section.in-view p {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  /* Add subtle shadow effect */
+  .section.in-view h2 {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  
+  .section.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
