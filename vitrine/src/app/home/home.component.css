@@ -5,9 +5,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #000000, #333333);
+    background: linear-gradient(135deg, rgba(0,0,0,0.5), rgba(51,51,51,0.5));
     color: white;
     text-align: center;
+    position: relative;
+    z-index: 0;
   }
   
   .hero h1 {
@@ -31,11 +33,11 @@
     justify-content: center;
     align-items: center;
     opacity: 0;
-    transform: translateY(150px); /* More dramatic entry */
-    transition: all 1.2s cubic-bezier(0.25, 0.1, 0.25, 1); /* Smoother easing */
+    transform: translateY(50px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
   }
   
-  .section.in-view {
+  .section-visible {
     opacity: 1;
     transform: translateY(0);
   }
@@ -80,5 +82,33 @@
       opacity: 1;
       transform: translateY(0);
     }
+  }
+  
+  .project-card {
+    transition: transform 0.3s ease;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+  }
+  
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.6s ease;
+  }
+  
+  .element-visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  canvas {
+    pointer-events: none;
+    background-color: transparent !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    z-index: 1 !important;
   }
   
