@@ -29,5 +29,6 @@ export class NavbarComponent {
 
   toggleMenu() {
     this.menuState = this.menuState === 'hidden' ? 'visible' : 'hidden';
+    console.log('Menu state:', this.menuState);
   }
 }

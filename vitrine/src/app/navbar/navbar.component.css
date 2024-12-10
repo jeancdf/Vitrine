@@ -16,15 +16,16 @@
   
   /* Page pleine écran */
   .fullscreen-nav {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: #ff5a5a; /* Couleur rouge de l'exemple */
     transform: translateY(-100%);
-    transition: transform 0.5s ease;
-    z-index: 1000;
+    opacity: 0;
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 0.5s ease;
+    z-index: 1001;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -33,6 +34,7 @@
   
   .fullscreen-nav.active {
     transform: translateY(0);
+    opacity: 1;
   }
   
   /* Liens de navigation */
@@ -69,5 +71,10 @@
     cursor: pointer;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
+  }
+  
+  .navbar-container {
+    position: relative;
+    z-index: 1001;
   }
   
