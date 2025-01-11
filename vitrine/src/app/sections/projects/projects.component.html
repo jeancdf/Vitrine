@@ -1,0 +1,17 @@
+<div class="section " data-speed="0.3" id="projects">
+    <div class="carousel-container">
+      <div class="carousel" #carousel>
+        <div
+          class="carousel-item"
+          *ngFor="let card of cards; let i = index"
+          [ngClass]="{ 'active': i === activeIndex, 'left': i === getLeftIndex(), 'right': i === getRightIndex() }"
+        >
+          <img [src]="card.image" [alt]="card.title" />
+          <div class="carousel-item-content">
+            <h3>{{ card.title }}</h3>
+            <p>{{ card.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>  
+  </div>

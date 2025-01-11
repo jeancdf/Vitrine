@@ -1,5 +1,5 @@
 <app-navbar></app-navbar>
-
+<app-stepper [currentPageIndex]="0"></app-stepper>
 <!-- Section Accueil -->
 <div class="hero " data-speed="-0.5">
   <div class="hero-content">
@@ -8,82 +8,5 @@
   </div>
 </div>
 
-<!-- Section À Propos -->
-<div class="section " data-speed="0.1" id="about">
-  <h2>À Propos de Moi</h2>
-  <p class="mx-5">
-    Bonjour, je suis <strong>[Votre Nom]</strong>, un développeur passionné basé à [Votre Ville]. Avec [X années] d'expérience en développement web, je me spécialise dans la création de solutions innovantes, responsives et adaptées aux besoins des clients.
-  </p>
-</div>
 
-<!-- Section Compétences -->
-<div class="section " data-speed="0.2" id="skills">
-  <h2>Mes Compétences</h2>
-  <p>Voici les technologies et outils que je maîtrise :</p>
-  <ul>
-    <li>Frontend : Angular, React, Bootstrap, CSS/SCSS</li>
-    <li>Backend : Node.js, Django, Flask</li>
-    <li>Base de Données : PostgreSQL, MongoDB, MySQL</li>
-    <li>Autres : Git, Docker, APIs REST</li>
-  </ul>
-</div>
 
-<div class="section " data-speed="0.3" id="projects">
-  <div class="carousel-container">
-    <div class="carousel" #carousel>
-      <div
-        class="carousel-item"
-        *ngFor="let card of cards; let i = index"
-        [ngClass]="{ 'active': i === activeIndex, 'left': i === getLeftIndex(), 'right': i === getRightIndex() }"
-      >
-        <img [src]="card.image" [alt]="card.title" />
-        <div class="carousel-item-content">
-          <h3>{{ card.title }}</h3>
-          <p>{{ card.description }}</p>
-        </div>
-      </div>
-    </div>
-  </div>  
-</div>
-
-<!-- Section Projets
-<div class="section " data-speed="0.3" id="projects">
-  <h2>Mes Projets</h2>
-  <p>Découvrez quelques-uns de mes travaux :</p>
-  <div class="project-card" id="project1">
-    <h3>Projet 1 : Application Web Innovante</h3>
-    <p>
-      Une application web développée avec Angular et Django qui permet aux utilisateurs de [fonctionnalité spécifique].
-    </p>
-    <a href="#" target="_blank">Voir le Projet</a>
-  </div>
-
-  <div class="project-card" id="project2">
-    <h3>Projet 2 : Application Mobile</h3>
-    <p>
-      Développement d'une application mobile multiplateforme avec React Native pour [objectif spécifique].
-    </p>
-    <a href="#" target="_blank">Voir le Projet</a>
-  </div>
-
-  <div class="project-card" id="project3">
-    <h3>Projet 3 : Plateforme E-commerce</h3>
-    <p>
-      Conception et mise en œuvre d'une solution e-commerce évolutive avec [technologies utilisées].
-    </p>
-    <a href="#" target="_blank">Voir le Projet</a>
-  </div>
-</div> -->
-
-<!-- Section Contact -->
-<div class="section " data-speed="0.4" id="contact">
-  <h2>Contactez-moi</h2>
-  <p>
-    Je serais ravi d'échanger avec vous ! Que ce soit pour discuter d'un projet, poser une question ou simplement établir un contact, n'hésitez pas à me joindre.
-  </p>
-  <ul>
-    <!-- <li>Email : <a href="mailto:votre-email@example.com">votre-email@example.com</a></li> -->
-    <li>LinkedIn : <a href="https://linkedin.com/in/votre-profil" target="_blank">linkedin.com/in/votre-profil</a></li>
-    <li>GitHub : <a href="https://github.com/votre-utilisateur" target="_blank">github.com/votre-utilisateur</a></li>
-  </ul>
-</div>
